@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Card</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+        text-align: center;
+        font-family: "Arial", sans-serif;
+        height: 100vh;
+        font-weight: 600;
+        font-size: large;
+      }
+      main {
+        margin: 0 auto;
+        width: 300px;
+        height: 500px;
+      }
+      .topCardContainer {
+        padding: 5px;
+        width: 50vw;
+        height: 30vh;
+        max-width: 400px;
+        max-height: 300px;
+        padding: 2px;
+        border: none;
+        position: relative;
+        background-color: #ff6f91;
+        color: white;
+        border-radius: 15px 15px 0 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        z-index: 10;
+        left: 2px;
+        top: 219px;
+        bottom: -200px;
+        transition: all 0.9s ease;
+      }
+      .topCardContainer:focus {
+        transform: translateY(-200px);
+      }
+      .buttomCardContainer {
+        background-color: #ff9671;
+        color: whitesmoke;
+        width: 50vw;
+        height: 27vh;
+        max-width: 400px;
+        max-height: 300px;
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+      @media (max-width: 600px) {
+        body {
+          font-weight: 200;
+          font-size: medium;
+        }
+        .topCardContainer {
+          padding: 5px;
+          width: 60vw;
+          margin: 0 auto;
+        }
+        .buttomCardContainer {
+          margin: 0 auto;
+          width: 60vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div tabindex="0" class="topCardContainer">
+        <h1>It`s Your Day😃!!!</h1>
+        <p>Click To Open This Card</p>
+      </div>
+      <div class="buttomCardContainer">
+        <h2>Happy Birthday To You</h2>
+        <p>
+          Wishing you a day filled with joy, happiness, laughter and everything
+          you deserve
+        </p>
+        <p>Stay happy and stay blessed</p>
+        <p>Wishing you a joy filled year ahead💗💓!</p>
+      </div>
+    </main>
+  </body>
+</html>

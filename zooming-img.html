@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover image Zoom</title>
+    <style>
+      body {
+        background-color: #1a1a2e;
+      }
+      header,
+      main {
+        text-align: center;
+        color: white;
+      }
+      #mainimg {
+        margin: 100px auto;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 2px solid white;
+        transition: all 0.6s ease;
+      }
+      #mainimg:hover {
+        transform: scale(2);
+        box-shadow: 0 0 15px #00fff1;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Zoom Image</h1></header>
+    <main>
+      <img
+        id="mainimg"
+        src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1760199752/scyflixLogo_ftsrhk.jpg"
+        alt="scyflix Logo"
+      />
+      <p id="text">Hover to see zoom effect</p>
+      <img src="zoomonhovercsscode.png" alt="codesnap of this style" />
+    </main>
+  </body>
+</html>

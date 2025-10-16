@@ -1,0 +1,263 @@
+html,
+body {
+  font-family: "Open Sans", monospace;
+  background: #0769e0;
+  color: #f0f4ff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-size: large;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  color: white;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: larger;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #ffe600;
+  text-shadow: 0 0 10px #ffe600;
+}
+
+nav > ul > li {
+  display: inline;
+}
+main {
+  flex: 1;
+  padding-top: 65px;
+  width: 100%;
+}
+#hero {
+  margin: 15px auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 80%;
+}
+
+a {
+  color: #ffeb3b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  text-shadow: 0 0 6px #ffeb3b;
+}
+
+#welcome-message {
+  border-bottom: 2px solid #ffffff;
+  width: 0;
+  text-align: center;
+  margin: 30px auto;
+  text-align: center;
+  text-wrap: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(30) forwards;
+}
+#cards {
+  margin: 20px 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.card {
+  background-color: #124e96;
+  color: #ffffff;
+  width: 400px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 40px auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+}
+.card h2 {
+  color: #fff;
+}
+.card p span {
+  font-weight: bolder;
+  font-size: larger;
+  color: #ffeb3b;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+footer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    text-shadow: none;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  nav > ul > li > a {
+    font-size: 13px;
+    margin: 0 5px;
+    color: white;
+  }
+  nav {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: 85vw;
+    margin: 10px auto;
+  }
+  #cards {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #welcome-message {
+    white-space: nowrap;
+    font-size: larger;
+  }
+  #about-container section,
+  #projects-container section {
+    margin: 5px 0;
+  }
+}
+.project span {
+  font-weight: bolder;
+}
+
+blockquote img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+#about-container,
+#projects-container,
+#contact-container {
+  max-width: 80vw;
+  background: rgba(96, 165, 250, 0.25);
+  backdrop-filter: blur(80px);
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  color: #f0f4ff;
+}
+#about-container section,
+#projects-container section {
+  margin: 20px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid white;
+}
+.project {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  transition: all 0.7s ease;
+}
+.project:hover {
+  transform: scale(1.03);
+}
+#scyflix-video-preview {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}
+
+#scyflix-video-preview iframe {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.button {
+  text-align: center;
+  display: inline-block;
+  background-color: #ffeb3b;
+  color: #124e96;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 235, 59, 0.4);
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #124e96;
+  box-shadow: 0 0 20px rgba(255, 235, 59, 0.8);
+  transform: scale(1.05);
+}
+#contact-container a {
+  color: #ffeb3b;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contact-container a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #ffeb3b;
+}
+
+@media (max-width: 600px) {
+  #scyflix-container h2 {
+    font-size: 1.5rem;
+  }
+  #scyflix-video-preview iframe {
+    max-width: 100%;
+    height: 200px;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style form</title>
+    <style>
+      body {
+        background-color: #ecf0f1;
+        font-family: "Courier New", Courier, monospace;
+        font-size: larger;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        margin: 70px auto;
+        padding: 40px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+      .all-inputs {
+        width: 100%;
+        overflow: hidden;
+        height: 60px;
+        border: none;
+      }
+      .all-inputs:focus {
+        outline: none;
+      }
+      fieldset {
+        height: 70px;
+        border: none;
+        border-bottom: 2px solid #6868da;
+        transition: all 0.6s ease;
+        margin: 20px 0;
+      }
+      legend {
+        font-size: 14px;
+        font-weight: 600;
+        color: #6868da;
+      }
+      fieldset:focus-within {
+        border-bottom: 2px solid #ff6f91;
+      }
+      button {
+        height: 50px;
+        background-color: #6868da;
+        color: white;
+        font-size: larger;
+        padding: 10px;
+        transition: all 0.3s ease;
+      }
+      button:hover {
+        background-color: #ff6f91;
+        cursor: pointer;
+      }
+      h1 {
+        width: 700px;
+        font-family: monospace;
+        margin: 50px 50px;
+        text-wrap: nowrap;
+        overflow: hidden;
+        animation: typing 3s steps(800) alternate;
+      }
+      @keyframes typing {
+        from {
+          width: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is a login form styled with CSS.</h1>
+    <main>
+      <fieldset>
+        <legend>Name</legend>
+        <input
+          type="text"
+          name="name"
+          class="all-inputs"
+          placeholder="Enter your name"
+        />
+      </fieldset>
+      <fieldset>
+        <legend>Email</legend>
+        <input
+          type="email"
+          name="email"
+          class="all-inputs"
+          placeholder="Enter your email"
+          autocomplete="off"
+        />
+      </fieldset>
+      <fieldset>
+        <legend>Password</legend>
+        <input
+          type="password"
+          name="Password"
+          class="all-inputs"
+          placeholder="Enter your password"
+        />
+      </fieldset>
+      <button type="button">Login</button>
+    </main>
+  </body>
+</html>
