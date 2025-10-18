@@ -131,6 +131,31 @@ a:hover {
     margin: 10px auto;
   }
 }
+details {
+  width: 190px;
+}
+
+details a {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+  color: white;
+  text-decoration: none;
+}
+
+summary {
+  border: 2px solid white;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+summary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 @media (max-width: 600px) {
   body {
     text-shadow: none;
