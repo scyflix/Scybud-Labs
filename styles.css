@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: "Open Sans", monospace;
+  font-family: monospace, "Open Sans";
   background: linear-gradient(135deg, #021b40, #0769e0, #021b40);
   color: #f0f4ff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -98,7 +98,7 @@ a:hover {
   padding: 10px;
   margin: 40px auto;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.5s ease;
+  transition: all 0.6s ease-in;
 }
 .card h2 {
   color: #fff;
@@ -109,7 +109,7 @@ a:hover {
   color: #ffeb3b;
 }
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 @keyframes typing {
   from {
@@ -209,7 +209,8 @@ blockquote img {
 }
 #about-container,
 #projects-container,
-#contact-container {
+#contact-container,
+#faridatDescription-container {
   max-width: 80vw;
   background: rgba(96, 165, 250, 0.25);
   backdrop-filter: blur(80px);
@@ -220,19 +221,22 @@ blockquote img {
   color: #f0f4ff;
 }
 #about-container section,
-#projects-container section {
+#projects-container section,
+#faridatDescription-container section {
   margin: 20px 0;
   padding-bottom: 15px;
   border-bottom: 1px solid white;
 }
-.project {
+.project,
+.faridatDescription {
   border-radius: 10px;
   padding: 10px;
   margin: 10px auto;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
   transition: all 0.7s ease;
 }
-.project:hover {
+.project:hover,
+.faridatDescription:hover {
   transform: scale(1.03);
 }
 #scyflix-video-preview {
