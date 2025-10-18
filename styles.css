@@ -159,6 +159,7 @@ summary:hover {
 @media (max-width: 600px) {
   body {
     text-shadow: none;
+    font-size: large;
   }
   @keyframes typing {
     from {
@@ -184,7 +185,8 @@ summary:hover {
     font-size: larger;
   }
   #about-container section,
-  #projects-container section {
+  #projects-container section,
+  #faridatDescription-container section {
     margin: 5px 0;
   }
   #scyflix-container h2 {
