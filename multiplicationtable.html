@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 10px;
+        flex-direction: column;
+      }
+      input {
+        border-radius: 10px;
+        width: 60vw;
+        height: 30px;
+        background: white;
+        border: none;
+      }
+      button {
+        width: 300px;
+      }
+      div {
+        min-width: 100px;
+        padding: 10px;
+        margin: 10px 50px;
+        border: 2px solid white;
+        text-align: center;
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <input id="number" type="number" placeholder="enter a number" />
+        <button class="button" type="button" onclick="multNum()">
+          Get Table
+        </button>
+        <div>
+          <p id="Table"></p>
+        </div>
+      </section>
+    </main>
+    <script>
+      //loops
+      function multNum() {
+        const num = document.getElementById("number").value;
+        const table = document.getElementById("Table");
+        table.innerText = "";
+        for (let i = 1; i <= 10; i++) {
+          table.innerText += `${num} x ${i} = ${num * i}\n`;
+        }
+      }
+      multNum();
+    </script>
+  </body>
+</html>
