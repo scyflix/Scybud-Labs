@@ -33,6 +33,17 @@
         background-color: white;
         border-radius: 15px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 2s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
       .all-inputs {
         width: 100%;
@@ -43,6 +54,14 @@
       .all-inputs:focus {
         outline: none;
       }
+      .all-inputs:hover {
+        background-color: #f9f9ff;
+        transition: 0.3s ease;
+      }
+      input {
+        font-size: 16px;
+      }
+
       fieldset {
         height: 70px;
         border: none;
@@ -58,7 +77,11 @@
       fieldset:focus-within {
         border-bottom: 2px solid #ff6f91;
       }
+
       button {
+        border: none;
+        border-radius: 10px;
+        width: 100%;
         height: 50px;
         background-color: #6868da;
         color: white;
@@ -67,16 +90,20 @@
         transition: all 0.3s ease;
       }
       button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         background-color: #ff6f91;
         cursor: pointer;
       }
       h1 {
-        width: 700px;
         font-family: monospace;
-        margin: 50px 50px;
-        text-wrap: nowrap;
+        width: 100%;
+        max-width: 700px;
+        text-align: center;
+        margin: 30px auto;
         overflow: hidden;
-        animation: typing 3s steps(800) alternate;
+        text-wrap: nowrap;
+        animation: typing 3s steps(30) alternate;
       }
       @keyframes typing {
         from {
@@ -86,37 +113,71 @@
     </style>
   </head>
   <body>
-    <h1>This is a login form styled with CSS.</h1>
+    <h1>This is a login form.</h1>
     <main>
-      <fieldset>
-        <legend>Name</legend>
-        <input
-          type="text"
-          name="name"
-          class="all-inputs"
-          placeholder="Enter your name"
-        />
-      </fieldset>
-      <fieldset>
-        <legend>Email</legend>
-        <input
-          type="email"
-          name="email"
-          class="all-inputs"
-          placeholder="Enter your email"
-          autocomplete="off"
-        />
-      </fieldset>
-      <fieldset>
-        <legend>Password</legend>
-        <input
-          type="password"
-          name="Password"
-          class="all-inputs"
-          placeholder="Enter your password"
-        />
-      </fieldset>
-      <button type="button">Login</button>
+      <h5 id="loginMessage"></h5>
+      <form>
+        <fieldset>
+          <legend>Name</legend>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            class="all-inputs"
+            placeholder="Enter your name"
+          />
+        </fieldset>
+        <fieldset>
+          <legend>Email</legend>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            class="all-inputs"
+            placeholder="Enter your email"
+            autocomplete="off"
+          />
+        </fieldset>
+        <fieldset>
+          <legend>Password(scybudtech)</legend>
+          <input
+            id="password"
+            type="password"
+            name="Password"
+            class="all-inputs"
+            placeholder="Enter your password"
+          />
+        </fieldset>
+        <button onclick="login(event)" type="button">Login</button>
+      </form>
     </main>
+    <script>
+      function login(event) {
+        event.preventDefault();
+        const loginMessage = document.getElementById("loginMessage");
+        const username = document.getElementById("name").value;
+        const useremail = document.getElementById("email").value;
+        const userpassword = document.getElementById("password").value;
+        const password = "scybudtech";
+        const redirectURL = "projects.html";
+
+        if (!username || !useremail || !userpassword) {
+          loginMessage.style.color = "red";
+          loginMessage.innerText = "All field must be filled";
+        } else if (password === userpassword) {
+          loginMessage.style.color = "green";
+          loginMessage.innerText = `Hi, ${username} with the email: ${useremail}`;
+          document.querySelector("main").style.boxShadow = "0 0 20px #8ef08e";
+          setTimeout(() => {
+            document.querySelector("main").style.boxShadow =
+              "0 0 15px rgba(0, 0, 0, 0.2)";
+            window.location.href = redirectURL;
+          }, 3000);
+        } else {
+          loginMessage.style.color = "red";
+          loginMessage.innerText = "Incorrect password";
+        }
+      }
+    </script>
   </body>
 </html>
