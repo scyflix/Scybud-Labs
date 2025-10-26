@@ -48,10 +48,31 @@
     <meta name="author" content="Abdulroqib Oladipo" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Scybud | The Story, Mission, and Founder</title>
+    <link rel="stylesheet" href="sidebar.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="sidebar">
+      <div id="cancelIcon" onclick="togglesidebar()">
+        <span id="topbar"></span>
+        <span id="middlebar"></span>
+        <span id="bottombar"></span>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
     <header>
+      <div id="menuIcon" onclick="togglesidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <nav aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -192,5 +213,6 @@
     <footer>
       <p>&copy; scybud | All rights reserved</p>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
