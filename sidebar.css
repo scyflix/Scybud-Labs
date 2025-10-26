@@ -1,0 +1,65 @@
+@media (max-width: 800px) {
+  #menuIcon span,
+  #cancelIcon span {
+    background-color: beige;
+    width: 30px;
+    height: 5px;
+    border-radius: 20px;
+  }
+  #menuIcon,
+  #cancelIcon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-left: 20px;
+    margin-right: auto;
+  }
+  #middlebar {
+    display: none;
+  }
+  #topbar {
+    transform: rotate(45deg) translate(6px);
+  }
+  #bottombar {
+    transform: rotate(-45deg) translate(6px);
+  }
+  #cancelIcon {
+    margin: 20px 0 0 20px;
+  }
+  #sidebar {
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(
+      135deg,
+      rgb(4, 0, 54),
+      rgb(53, 53, 255),
+      rgb(22, 1, 52)
+    );
+    backdrop-filter: blur(10px) brightness(60%);
+    z-index: 2000;
+  }
+  #sidebar nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  header nav {
+    display: none;
+  }
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .show {
+    display: block !important;
+  }
+}
+#sidebar {
+  display: none;
+}
