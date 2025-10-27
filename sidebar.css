@@ -1,4 +1,4 @@
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #menuIcon span,
   #cancelIcon span {
     background-color: beige;
@@ -29,17 +29,12 @@
   #sidebar {
     top: 0;
     left: 0;
-    width: 50vw;
+    width: 80vw;
     height: 100vh;
     position: fixed;
-    background: linear-gradient(
-      135deg,
-      rgb(4, 0, 54),
-      rgb(53, 53, 255),
-      rgb(22, 1, 52)
-    );
-    backdrop-filter: blur(10px) brightness(60%);
+    background: linear-gradient(135deg, #021b40, #0769e0, #021b40);
     z-index: 2000;
+    border-radius: 10px;
   }
   #sidebar nav ul {
     display: flex;
