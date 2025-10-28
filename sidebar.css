@@ -35,6 +35,10 @@
     background: linear-gradient(135deg, #021b40, #0769e0, #021b40);
     z-index: 2000;
     border-radius: 10px;
+    cursor: pointer;
+  }
+  .show {
+    display: block !important;
   }
   #sidebar nav ul {
     display: flex;
@@ -50,9 +54,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-  }
-  .show {
-    display: block !important;
   }
 }
 #sidebar {
