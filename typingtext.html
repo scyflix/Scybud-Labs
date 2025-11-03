@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Typing Animation</title>
+      <style>
+            body {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 100vh;
+                  background-color: #121212;
+                  color: #ffffff;
+                  font-family: 'Courier New', Courier, monospace;
+            }
+            h1 {
+                  width: 100%;
+                  overflow: hidden;
+                  text-wrap: nowrap;
+                  animation:  typing 4s steps(30) infinite;
+            }
+            h1::after {
+                  content: "|";
+                  animation: blink 1s infinite;
+            }
+            @keyframes blink {
+                  0%, 50% {
+                        opacity: 0;
+                  }
+                  50%, 100% {
+                        opacity: 1;
+                  }
+            }
+            @keyframes typing {
+                  from {
+                        width: 0;
+                  }
+                  to {
+                        width: 100%
+                  }
+            }
+
+           
+      </style>
+</head>
+<body>
+      <main>
+         <h1 id="typing">Welcome To Scyflix!</h1>
+      </main>
+</body>
+</html>

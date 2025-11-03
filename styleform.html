@@ -105,9 +105,26 @@
         text-wrap: nowrap;
         animation: typing 3s steps(30) alternate;
       }
+      h1::after {
+        content: "|";
+        animation: blink 0.5s infinite;
+      }
+      @keyframes blink {
+        0%,
+        50% {
+          opacity: 1;
+        }
+        51%,
+        100% {
+          opacity: 0;
+        }
+      }
       @keyframes typing {
         from {
-          width: 0px;
+          width: 0;
+        }
+        to {
+          width: 100%;
         }
       }
     </style>
