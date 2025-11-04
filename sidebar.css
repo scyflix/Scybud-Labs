@@ -48,8 +48,8 @@
     border-radius: 10px;
     cursor: pointer;
   }
-  .show {
-    display: block !important;
+  #sidebar.show {
+    display: block ;
   }
   #sidebar nav ul {
     display: flex;
