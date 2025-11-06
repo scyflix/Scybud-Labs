@@ -7,10 +7,12 @@
   </head>
   <style>
     body {
-      background-color: coral;
+      background-color: 
+    rgb(0, 0, 29);
       margin: 0;
       padding: 0;
       text-align: center;
+      color: beige;
     }
     main {
       display: flex;
@@ -18,29 +20,39 @@
       gap: 20px;
       justify-content: center;
       align-items: center;
-      background-color: rgb(255, 189, 108);
-      width: 50vw;
+      background-color: rgb(0, 0, 63);
+      width: 50%;
       margin: 50px auto;
       height: 50vh;
       border-radius: 20px;
       flex-wrap: wrap;
     }
+    @media (max-width: 600px){
+main {
+  width: 80%;
+}
+    }
     input {
       border-radius: 10px;
       color: white;
-      max-width: 95%;
+      width: 90%;
       height: 40px;
-      background: linear-gradient(90deg, rgb(116, 31, 0), rgb(255, 129, 83));
+     
     }
     button {
       width: 60%;
       height: 35px;
-      background: linear-gradient(180deg, rgb(116, 31, 0), rgb(255, 129, 83));
+      background: rgb(11, 11, 165);
       color: white;
       font-weight: bold;
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      transition: transform 0.5s ease;
+    }
+    button:hover {
+      transform: scale(1.02);
+      
     }
     h1 {
       text-align: center;
