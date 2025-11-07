@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-5J3R5GPKQX"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-5J3R5GPKQX");
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hover image Zoom</title>
@@ -27,6 +13,36 @@
         text-align: center;
         color: white;
       }
+      #bgani {
+        margin: 176px auto;
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+        border: 2px solid white;
+        transition: all 2s ease;
+        position: absolute;
+        top: 0;
+        z-index: -2;
+        background: linear-gradient(
+          90deg,
+          #00fff1,
+          rgb(97, 0, 97),
+          rgb(52, 52, 255)
+        );
+        background-size: 300% 300%;
+        filter: blur(8px);
+        opacity: 0.8;
+        animation: colormove 5s ease alternate infinite;
+      }
+      @keyframes colormove {
+        0% {
+          background-position: 0% 0%;
+        }
+        100% {
+          background-position: 200% 0%;
+        }
+      }
+
       #mainimg {
         margin: 100px auto;
         width: 200px;
@@ -35,7 +51,6 @@
         border: 2px solid white;
         transition: all 2s ease;
       }
-
 
       #mainimg:hover {
         transform: scale(1.5) rotate(360deg);
@@ -57,20 +72,21 @@
       }
       img:hover {
         width: 100%;
-                box-shadow: 0 0 15px #00fff1;
+        box-shadow: 0 0 15px #00fff1;
       }
     </style>
   </head>
   <body>
     <header><h1>Zoom Image</h1></header>
     <main>
+      <div id="bgani"></div>
       <img
         id="mainimg"
         src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1760199752/scyflixLogo_ftsrhk.jpg"
         alt="scyflix Logo"
       />
       <p id="text">Hover to see zoom effect</p>
-      <img src="zoomonhovercsscode.png" alt="codesnap of this style" />
+      <img src="zoomandanimate.png" alt="codesnap of this style" />
     </main>
   </body>
 </html>
