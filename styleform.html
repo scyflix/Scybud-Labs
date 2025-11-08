@@ -109,6 +109,17 @@
         content: "|";
         animation: blink 0.5s infinite;
       }
+       img {
+        transition: all 2s ease;
+
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+      }
+      img:hover {
+        width: 100%;
+        box-shadow: 0 0 15px #00fff1;
+      }
       @keyframes blink {
         0%,
         50% {
@@ -168,6 +179,7 @@
         <button onclick="login(event)" type="button">Login</button>
       </form>
     </main>
+    <img src="styeformimg.png">
     <script>
       function login(event) {
         event.preventDefault();

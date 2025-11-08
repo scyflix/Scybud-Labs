@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+            background: #1f1f1f;
+            color: beige;
+            font-family: Arial, sans-serif;
+      }
+      main {
+            width: 800px;
+            max-width: 90vw;
+            margin: 30px auto;
+      }
+      form {
+            background-color: rgb(47, 47, 47);
+            width: 90%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            margin: 20px auto;
+            padding: 20px;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 20px;
+      }
+      input {
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            transition: box-shadow 0.5s ease;
+      }
+      input:focus {
+            box-shadow: 0 0 10px #66fff2;
+      }
+ label, legend {
+      font-weight: 600;
+ }
+ button {
+      width: 50%;
+      height: 40px;
+      margin: 10px  auto;
+      border-radius: 10px;
+      font-weight: 600;
+      background-color: dimgrey;
+      color: #f1f1f1;
+      font-size: large;
+      transition: background-color 0.5s ease;
+ }
+ button:hover {
+      background-color: #1f1f1f;
+ }
+ h1 {
+      text-align: center;
+ }
+ img {
+        transition: all 2s ease;
+
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+      }
+      img:hover {
+        width: 100%;
+        box-shadow: 0 0 15px #00fff1;
+      }
+    </style>
+  </head>
+  <body>
+      <main>
+            <h1>Login to Me</h1>
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name" placeholder="e.g Alice Bora" />
+              <label for="email">Email:</label>
+              <input type="email" id="email" placeholder="youremail@gmail.com" />
+              <fieldset>
+                <legend>Password</legend>
+                <label for="password">Enter Password:</label>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Enter Your password"
+                />
+                <label for="confirmPassword">Confirm Password:</label>
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  placeholder="Confirm Your password"
+                />
+              </fieldset>
+              <button type="submit">Login</button>
+            </form>
+      </main>
+      <img src="styeformimg1.png" alt="Code image for s.html page">
+  </body>
+</html>
