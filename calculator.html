@@ -7,9 +7,6 @@
     <style>
       body {
         margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
         background-color: #25294d;
       }
@@ -64,7 +61,7 @@
       .operators:active {
         background-color: rgb(255, 182, 46);
       }
-      @media (max-width: 600px) {
+      @media (max-width: 800px) {
         #calculator {
           font-family: monospace, Arial;
           background-color: #1c1f3b;
@@ -80,11 +77,20 @@
           border: none;
           background-color: rgba(0, 0, 0, 1);
           color: white;
-          font-size: 60px;
+          font-size: 30px;
           font-weight: bold;
           cursor: pointer;
         }
       }
+      footer {
+  color: beige;
+  padding: 10px 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
     </style>
   </head>
   <body>

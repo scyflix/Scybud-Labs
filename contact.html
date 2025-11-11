@@ -94,10 +94,15 @@
   action="https://formspree.io/f/xeordzgj"
   method="POST"
 >
-    <input type="text" name="name" placeholder="Your name" required>
-    <input type="email" name="email" placeholder="Your email" required>
-    <textarea name="message" minlength="50" placeholder="What`s your message" required></textarea>
-  <!-- your other form fields go here -->
+<label>Name:
+  <input type="text" name="name" placeholder="Your name" required>
+</label>
+<label>Email:
+  <input type="email" name="email" placeholder="Your email" required>
+</label>
+<label>Message
+  <textarea name="message" minlength="50" placeholder="What`s your message" required></textarea>
+</label>
   <button type="submit" id="formbtn">Send</button>
 </form>
     <p>

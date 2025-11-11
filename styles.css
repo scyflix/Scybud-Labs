@@ -56,14 +56,14 @@ main {
   width: 100%;
 }
 #hero {
-   text-align: center;
-      margin: 40px 0;
+text-align: center;      margin: 40px auto;
       padding: 40px;
       border-radius: 15px;
       backdrop-filter: blur(12px);
       background: rgba(255,255,255,0.15);
       animation: fadeIn 1.2s ease;
       max-width: 90%;
+
 }
  @keyframes fadeIn {
       from {opacity:0; transform: translateY(15px);} 
@@ -101,7 +101,14 @@ a:hover {
   }
 }
 details {
-  width: 190px;
+  width: auto;
+  position: sticky;
+  top: 50px;
+  left: 0;
+  z-index: 1;
+  background-color: #021b40;
+  margin:  0 auto;
+    border-radius: 20px;
 }
 
 details a {
@@ -254,14 +261,32 @@ form {
   width: 98%;
   border-radius: 10px;
   gap: 10px;
-  padding: 5px;
+  padding: 5px 0 5px 10px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 input,
 textarea {
   margin: 10px;
-  width: 80%;
+  max-width: 90%;
+  width: 100%;
   background-color: #fafafa;
   border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  outline: none;
+  transition: outline 0.6s ease, box-shadow 0.6s ease, transform 0.6s ease;
+}
+input:hover,
+textarea:hover {
+  transform: translateY(-3px);
+    box-shadow: 0 0 15px #02428f;
+
+}
+input:focus,
+textarea:focus {
+  outline: 2px solid #00ffd9;
+  box-shadow: 0 0 15px #0769e0;
 }
 input {
   height: 30px;
