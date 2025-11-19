@@ -1,5 +1,0 @@
-{
-  // Increase UI scale so the file explorer and other UI elements appear larger.
-  // Change this value to 0, 1, 2, ... as preferred (negative values zoom out).
-  "window.zoomLevel": 1
-}
