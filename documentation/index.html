@@ -1,74 +1,116 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <nav id="navbar">
-  <header>
-    <h1>HTML Documentation</h1>
-  </header>
-  <a href="#introduction" class="nav-link">Introduction</a>
-  <a href="#why_html" class="nav-link">Why HTML</a>
-  <a href="#basic_syntax" class="nav-link">Basic Syntax</a>
-  <a href="#html_hierarchy" class="nav-link">HTML Hierarchy</a>
-  <a href="#semantic_tags" class="nav-link">Semantic Tags</a>
-</nav>
+      <header>
+        <h1>HTML Documentation</h1>
+      </header>
+      <a href="#introduction" class="nav-link">Introduction</a>
+      <a href="#why_html" class="nav-link">Why HTML</a>
+      <a href="#basic_syntax" class="nav-link">Basic Syntax</a>
+      <a href="#html_hierarchy" class="nav-link">HTML Hierarchy</a>
+      <a href="#semantic_tags" class="nav-link">Semantic Tags</a>
+    </nav>
     <main id="main-doc">
       <section id="introduction" class="main-section">
         <header><h2>Introduction</h2></header>
-        
-<p>HTML (HyperText Markup Language) is a markup language used to define the structure of a webpage. It is the skeleton of every website you will ever see. HTML tells the browser how to display content such as text, images, links, and headings.</p>
-<p> It forms the foundation of web development, working together with CSS for styling and JavaScript for interactivity.</p>
 
+        <p>
+          HTML (HyperText Markup Language) is a markup language used to define
+          the structure of a webpage. It is the skeleton of every website you
+          will ever see. HTML tells the browser how to display content such as
+          text, images, links, and headings.
+        </p>
+        <p>
+          It forms the foundation of web development, working together with CSS
+          for styling and JavaScript for interactivity.
+        </p>
       </section>
       <section id="why_html" class="main-section">
         <header><h2>Why HTML</h2></header>
-<ul>
-  <li>Foundation of the web</li>
-        <p>Every website you visit is built using HTML. Without it, web pages cannot exist.</p>
-  <li>Defines page structure</li>
-<p>It organizes content like text, images, links, buttons, and forms so browsers know how to display them.</p>
-  <li>Easy to learn</li>
-  <p>HTML is beginner-friendly and has simple rules, making it a great starting point for web development.</p>
-  <li>Works with CSS & JavaScript
-</li>
-<p>HTML gives structure, CSS adds design, and JavaScript adds interactivity — together they create modern websites.</p>
-  <li>Universal and essential</li>
-  <p>HTML is supported by all browsers and devices, making it the universal language of the web.</p>
-</ul>
+        <ul>
+          <li>Foundation of the web</li>
+          <p>
+            Every website you visit is built using HTML. Without it, web pages
+            cannot exist.
+          </p>
+          <li>Defines page structure</li>
+          <p>
+            It organizes content like text, images, links, buttons, and forms so
+            browsers know how to display them.
+          </p>
+          <li>Easy to learn</li>
+          <p>
+            HTML is beginner-friendly and has simple rules, making it a great
+            starting point for web development.
+          </p>
+          <li>Works with CSS & JavaScript</li>
+          <p>
+            HTML gives structure, CSS adds design, and JavaScript adds
+            interactivity — together they create modern websites.
+          </p>
+          <li>Universal and essential</li>
+          <p>
+            HTML is supported by all browsers and devices, making it the
+            universal language of the web.
+          </p>
+        </ul>
       </section>
       <section id="basic_syntax" class="main-section">
         <header><h2>Basic Syntax</h2></header>
-<p>HTML is written using tags that tell the browser how to display content.
-Most tags come in pairs, with an opening tag and a closing tag.</p>
-       <p>
-It uses an opening tag like <code>&lt;tagname&gt;</code> and a closing tag like <code>&lt;/tagname&gt;</code>.
-</p>
+        <p>
+          HTML is written using tags that tell the browser how to display
+          content. Most tags come in pairs, with an opening tag and a closing
+          tag.
+        </p>
+        <p>
+          It uses an opening tag like <code>&lt;tagname&gt;</code> and a closing
+          tag like <code>&lt;/tagname&gt;</code>.
+        </p>
       </section>
       <section id="html_hierarchy" class="main-section">
         <header><h2>HTML Hierarchy</h2></header>
-        <p>HTML follows a parent–child structure, where elements can contain other elements.
-          </p>
-          <p>
-At the top level, you have the <code>&lt;html&gt;</code> element, and inside it you place the <code>&lt;head&gt;</code>  and <code>&lt;body&gt;</code> sections.
-Inside the <code>&lt;body&gt;</code>, you place the content elements like headings, paragraphs, lists, images, and more.
-</p>
-<p>
-In simple terms:
-HTML is nested — big elements hold smaller elements.</p>
-<p>This organization creates a clear hierarchy that the browser uses to understand how content is related and how it should be displayed.</p>
+        <p>
+          HTML follows a parent–child structure, where elements can contain
+          other elements.
+        </p>
+        <p>
+          At the top level, you have the <code>&lt;html&gt;</code> element, and
+          inside it you place the <code>&lt;head&gt;</code> and
+          <code>&lt;body&gt;</code> sections. Inside the
+          <code>&lt;body&gt;</code>, you place the content elements like
+          headings, paragraphs, lists, images, and more.
+        </p>
+        <p>
+          In simple terms: HTML is nested — big elements hold smaller elements.
+        </p>
+        <p>
+          This organization creates a clear hierarchy that the browser uses to
+          understand how content is related and how it should be displayed.
+        </p>
       </section>
       <section id="semantic_tags" class="main-section">
         <header><h2>Semantic Tags</h2></header>
-<p>Semantic tags in HTML are elements that clearly describe their meaning and purpose to both the browser and developers. Instead of simply creating structure, they tell what the content represents.</p>
-<p>Examples include <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code>. These tags improve code readability, accessibility, and search engine understanding, making web pages more organized and meaningful compared to generic containers like <code>&lt;div&gt;</code>.</p>
+        <p>
+          Semantic tags in HTML are elements that clearly describe their meaning
+          and purpose to both the browser and developers. Instead of simply
+          creating structure, they tell what the content represents.
+        </p>
+        <p>
+          Examples include <code>&lt;header&gt;</code>,
+          <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+          <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and
+          <code>&lt;footer&gt;</code>. These tags improve code readability,
+          accessibility, and search engine understanding, making web pages more
+          organized and meaningful compared to generic containers like
+          <code>&lt;div&gt;</code>.
+        </p>
       </section>
-
     </main>
-    </body>
+  </body>
 </html>
-
