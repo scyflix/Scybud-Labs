@@ -6,9 +6,10 @@
   #cancelIcon span {
     width: 28px;
     height: 4px;
-    background: #f4f4f4;
     border-radius: 20px;
     transition: 0.3s ease;
+        background: #ffeb3b;
+
   }
 
   #menuIcon,
@@ -20,12 +21,6 @@
     cursor: pointer;
   }
 
-  #menuIcon span {
-    background: #fff;
-  }
-  #cancelIcon span {
-    background: #fff;
-  }
 
   /* Cancel (X) animation */
   #topbar {
@@ -70,6 +65,7 @@
     gap: 28px;
     align-items: flex-start;
     padding-left: 30px;
+
   }
 
   #sidebar nav ul li a {
