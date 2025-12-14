@@ -53,15 +53,22 @@
     <link rel="stylesheet" href="sidebar.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="cards.css" />
+    <style>
+      #sidebarContainer {
+        background-color: rgb(0, 0, 0);
+        width: 100vw;
+        height: 100dvh;
+      }
+    </style>
   </head>
   <body>
-    <div id="sidebar">
-      <div id="cancelIcon" onclick="togglesidebar()">
+      <div id="sidebar">
+        <div id="cancelIcon" onclick="togglesidebar()">
         <span id="topbar"></span>
         <span id="middlebar"></span>
         <span id="bottombar"></span>
       </div>
-      <nav aria-label="Main navigation">
+      <nav aria-label="sidebar navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
