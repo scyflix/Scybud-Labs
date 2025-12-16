@@ -125,10 +125,10 @@
         <section>
           <h3>When to use semantic tags vs generic tags</h3>
           <h4>Semantic Tags</h4>
-          <p>You should only use semantic tags when the element has meaning.</p>
           <p>
-            An element having meaning in the sense that it is desvriptive and
-            you can identify its purpose just from its name.
+            You should only use semantic tags when the element has meaning. An
+            element having meaning in the sense that it is desvriptive and you
+            can identify its purpose just from its name.
           </p>
           <p class="example">Example:</p>
           <pre><code>
@@ -137,8 +137,6 @@
 &lt;nav&gt; &lt;/nav&gt; 
 &lt;article&gt; &lt;/article&gt;</code></pre>
         </section>
-      </section>
-      <section>
         <h4>Generic Tags</h4>
         <p>
           Generic tags should be used onlly when semantic tags dont make sense.
@@ -148,15 +146,15 @@
         <pre><code>
 &lt;div id=&quot;modal&quot;&gt;&lt;/div&gt;
 &lt;span class=&quot;shadow-box&quot;&gt; &lt;/span&gt; 
-            </code>
-           </pre>
+        </code>
+      </pre>
       </section>
     </main>
     <script>
       const menuIcon = document.querySelector(".menuIcon");
       const navbar = document.getElementById("navbar");
       const mainDoc = document.getElementById("main-doc");
-const navLinks = document.querySelectorAll("#navbar a")
+      const navLinks = document.querySelectorAll("#navbar a");
 
       function navbarToggle() {
         navbar.classList.toggle("hide");
@@ -169,8 +167,8 @@ const navLinks = document.querySelectorAll("#navbar a")
       navLinks.forEach((link) => {
         link.addEventListener("click", () => {
           navbarToggle();
-        })
-      })
+        });
+      });
     </script>
   </body>
 </html>
