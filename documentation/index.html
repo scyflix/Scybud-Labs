@@ -13,162 +13,303 @@
       <header>
         <div class="menuIcon">
           <span></span>
-          <span></span><span></span>
+          <span></span>
+          <span></span>
         </div>
         <h1>HTML Doc</h1>
       </header>
 
-      <a class="nav-link" href="#Introduction">Introduction</a>
-      <a class="nav-link" href="#Why_HTML">Why HTML</a>
-      <a class="nav-link" href="#Basic_Syntax">Basic Syntax</a>
-      <a class="nav-link" href="#HTML_Hierarchy">HTML Hierarchy</a>
-      <a class="nav-link" href="#Semantic_Tags">Semantic Tags</a>
+      <details>
+        <summary>Introduction</summary>
+        <ul>
+          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li><a href="#Why_HTML" class="nav-link">Why HTML</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Document Structure</summary>
+        <ul>
+          <li>
+            <a class="nav-link" href="#html_document_structure"
+              >Document Structure</a
+            >
+          </li>
+          <li><a href="#basic_syntax" class="nav-link">Basic Syntax</a></li>
+          <li>
+            <a href="#doctype_and_standard_mode" class="nav-link"
+              >Doctype & Standard Mode</a
+            >
+          </li>
+          <li>
+            <a href="#nesting_and_content_hierarchy" class="nav-link"
+              >Nesting & Hierarchy</a
+            >
+          </li>
+          <li><a href="#semantic_Tags" class="nav-link">Semantic Tags</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Headings & Outlines</summary>
+        <ul>
+          <li><a href="#headings" class="nav-link">Headings</a></li>
+          <li><a href="#text_semantics" class="nav-link">Text Semantics</a></li>
+        </ul>
+      </details>
     </nav>
 
     <!-- Main content -->
     <main id="main-doc">
       <!-- Introduction -->
-      <section class="main-section" id="Introduction">
-        <header>
-          <h2>Introduction</h2>
-        </header>
-
-        <p>
-          HTML (HyperText Markup Language) is a markup language used to define
-          the structure of a webpage. It is the skeleton of every website you
-          will ever see.
-        </p>
-        <p>
-          HTML works together with CSS for styling and JavaScript for
-          interactivity.
-        </p>
-      </section>
-
-      <!-- Why HTML -->
-      <section class="main-section" id="Why_HTML">
-        <header>
-          <h2>Why HTML</h2>
-        </header>
-
-        <ul>
-          <li>
-            <strong>Foundation of the web</strong>
-            <p>Every website is built using HTML.</p>
-          </li>
-          <li>
-            <strong>Defines page structure</strong>
-            <p>It organizes text, images, links, buttons, and forms.</p>
-          </li>
-          <li>
-            <strong>Easy to learn</strong>
-            <p>HTML is beginner-friendly and simple.</p>
-          </li>
-          <li>
-            <strong>Works with CSS & JavaScript</strong>
-            <p>
-              HTML gives structure, CSS adds design, and JavaScript adds
-              interactivity.
-            </p>
-          </li>
-          <li>
-            <strong>Universal and essential</strong>
-            <p>HTML is supported by all browsers and devices.</p>
-          </li>
-        </ul>
-      </section>
-
-      <!-- Basic Syntax -->
-      <section class="main-section" id="Basic_Syntax">
-        <header>
-          <h2>Basic Syntax</h2>
-        </header>
-
-        <p>
-          HTML is written using tags. Most tags have an opening and closing
-          pair.
-        </p>
-
-        <code>&lt;tagname&gt;Content&lt;/tagname&gt;</code>
-      </section>
-
-      <!-- HTML Hierarchy -->
-      <section class="main-section" id="HTML_Hierarchy">
-        <header>
-          <h2>HTML Hierarchy</h2>
-        </header>
-
-        <p>HTML elements follow a parent–child hierarchy.</p>
-
-        <p>
-          The <code>&lt;html&gt;</code> element contains
-          <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>.
-        </p>
-
-        <p>This nesting helps browsers understand how content is structured.</p>
-      </section>
-
-      <!-- Semantic Tags -->
-      <section class="main-section" id="Semantic_Tags">
-        <header>
-          <h2>Semantic Tags</h2>
-        </header>
-
-        <p>Semantic tags describe the meaning and purpose of content.</p>
-
-        <p>
-          Examples include <code>&lt;header&gt;</code>,
-          <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
-          <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and
-          <code>&lt;footer&gt;</code>.
-        </p>
-
+      <article class="main-section" id="Introduction">
         <section>
-          <h3>When to use semantic tags vs generic tags</h3>
-          <h4>Semantic Tags</h4>
+          <h2>Introduction</h2>
+
           <p>
-            You should only use semantic tags when the element has meaning. An
-            element having meaning in the sense that it is desvriptive and you
-            can identify its purpose just from its name.
+            HTML(HyperText Markup Language) is the foundation of the web. It
+            defines the structure and meaning of content displayed in a browser.
+            Modern HTML focuses not only on visual layout but also on semantics,
+            accessibility, maintainability, and performance. This document
+            covers core and advanced HTML concepts needed to build professional,
+            standards-compliant web pages.
           </p>
-          <p class="example">Example:</p>
-          <pre><code>
-&lt;header&gt; &lt;/header&gt;
-&lt;main&gt; &lt;/main&gt; 
-&lt;nav&gt; &lt;/nav&gt; 
-&lt;article&gt; &lt;/article&gt;</code></pre>
+          <p>
+            HTML works together with CSS for styling and JavaScript for
+            interactivity.
+          </p>
         </section>
-        <h4>Generic Tags</h4>
-        <p>
-          Generic tags should be used onlly when semantic tags dont make sense.
-          They come in handy when the content has no semantic meaning.
-        </p>
-        <p>Example</p>
-        <pre><code>
-&lt;div id=&quot;modal&quot;&gt;&lt;/div&gt;
-&lt;span class=&quot;shadow-box&quot;&gt; &lt;/span&gt; 
-        </code>
+        <!-- Why HTML -->
+        <section class="main-section" id="Why_HTML">
+          <h2>Why HTML</h2>
+
+          <ul>
+            <li>
+              <strong>Foundation of the web</strong>
+              <p>Every website is built using HTML.</p>
+            </li>
+            <li>
+              <strong>Defines page structure</strong>
+              <p>It organizes text, images, links, buttons, and forms.</p>
+            </li>
+            <li>
+              <strong>Easy to learn</strong>
+              <p>HTML is beginner-friendly and simple.</p>
+            </li>
+            <li>
+              <strong>Works with CSS & JavaScript</strong>
+              <p>
+                HTML gives structure, CSS adds design, and JavaScript adds
+                interactivity.
+              </p>
+            </li>
+            <li>
+              <strong>Universal and essential</strong>
+              <p>HTML is supported by all browsers and devices.</p>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <div id="hidden">
+        <article class="main-section" id="document_structure">
+          <!--HTML Document Structure-->
+          <section id="html_document_structure">
+            <h2>HTML Document Structure</h2>
+            <p>
+              An HTML document follows a standardized structure that allows
+              browsers to correctly parse and render content. This structure
+              separates metadata from visible content, ensuring clarity and
+              consistency across devices and browsers.
+            </p>
+            <p>
+              A well-structured document improves accessibility, search engine
+              optimization (SEO), and long-term maintainability. Browsers
+              process HTML from top to bottom and construct an internal
+              representation of the page before displaying it.
+            </p>
+            <h4>Key Points</h4>
+            <ul>
+              <li>HTML has a predictable document structure</li>
+              <li>Structure affects accessibility and SEO</li>
+              <li>Poor structure can cause rendering issues</li>
+            </ul>
+          </section>
+          <section id="basic_syntax">
+            <!-- Basic Syntax -->
+            <h3>Basic Syntax</h3>
+            <p>
+              HTML is written using tags. Most tags have an opening and closing
+              pair.
+            </p>
+            <p>Example:</p>
+            <code>&lt;tagname&gt;Content&lt;/tagname&gt;</code>
+            <hr />
+            <div class="question">
+              <h2>Review Questions</h2>
+              <ol>
+                <li>Why is document structure important for accessibility?</li>
+                <li>How does structure affect how browsers render a page?</li>
+              </ol>
+            </div>
+          </section>
+
+          <!--Doctype And Standards Mode-->
+          <section id="doctype_and_standard_mode">
+            <h2>Doctype and standard mode</h2>
+            <p>
+              The <code>&lt;!DOCTYPE /&gt;</code> declaration tells the browser
+              to render the page using modern web standards. Without it,
+              browsers may switch to quirks mode, which emulates older behavior
+              and can break layouts.
+            </p>
+            <p>
+              Using the correct doctype ensures consistency and enables modern
+              HTML features.
+            </p>
+
+            <h4>Key Points</h4>
+            <ul>
+              <li>Enables standards mode</li>
+              <li>Prevents quirks mode</li>
+              <li>Required for predictable layouts</li>
+            </ul>
+
+            <h2>Review Questions</h2>
+            <ol>
+              <li>What is quirks mode?</li>
+              <li>Why is standards mode important?</li>
+            </ol>
+          </section>
+        </article>
+
+        <!--HTML Nesting and Content Hierarchy-->
+        <article id="html_nesting_and_content_hierarchy">
+          <section id="nesting_and_content_hierarchy">
+            <h2>HTML Nesting and Content Hierarchy</h2>
+
+            <p>
+              HTML elements exist in a hierarchical structure where elements can
+              contain other elements. This hierarchy forms the Document Object
+              Model (DOM).
+            </p>
+            <p>
+              Correct nesting preserves meaning and ensures that browsers and
+              assistive technologies understand content relationships. Improper
+              nesting can lead to broken layouts and accessibility problems.
+            </p>
+            <p>
+              The <code>&lt;html&gt;</code> element contains
+              <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>.This
+              nesting helps browsers understand how content is structured.
+            </p>
+
+            <h4>Key Points</h4>
+            <ul>
+              <li>Helps browsers understand how content is structured.</li>
+              <li>Preserves content meaning</li>
+              <li>Elements follow a parent–child hierarchy.</li>
+            </ul>
+
+            <h2>Review Questions</h2>
+            <ol>
+              <li>How does incorrect nesting affect screen readers?</li>
+              <li>Why is hierarchy important beyond visual layout?</li>
+            </ol>
+          </section>
+
+          <!-- Semantic Tags -->
+          <section class="main-section" id="semantic_Tags">
+            <h2>Using Semantic Tags</h2>
+
+            <p>Semantic tags describe the meaning and purpose of content.</p>
+
+            <p>
+              Examples include <code>&lt;header&gt;</code>,
+              <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+              <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and
+              <code>&lt;footer&gt;</code>.
+            </p>
+
+            <h3>When to use semantic tags vs generic tags</h3>
+            <h4>Semantic Tags</h4>
+            <p>
+              You should only use semantic tags when the element has meaning. An
+              element having meaning in the sense that it is desvriptive and you
+              can identify its purpose just from its name.
+            </p>
+            <p class="example">Example:</p>
+            <pre><code>
+    &lt;header&gt; &lt;/header&gt;
+    &lt;main&gt; &lt;/main&gt; 
+    &lt;nav&gt; &lt;/nav&gt; 
+    &lt;article&gt; &lt;/article&gt;</code></pre>
+          </section>
+
+          <section id="generic_tags">
+            <h4>Using Generic Tags</h4>
+            <p>
+              Generic tags should be used onlly when semantic tags dont make
+              sense. They come in handy when the content has no semantic
+              meaning.
+            </p>
+            <p>Example</p>
+            <pre><code>
+    &lt;div id=&quot;modal&quot;&gt;&lt;/div&gt;
+    &lt;span class=&quot;shadow-box&quot;&gt; &lt;/span&gt; 
+  </code>
       </pre>
-      </section>
+          </section>
+        </article>
+
+        <!--Headings and document outlines-->
+        <article id="headings_and_document_outline">
+          <section id="headings">
+            <h2>Headings and Document Outline</h2>
+            <h3>Headings</h3>
+            <p>
+              Headings define the logical outline of a document. They help users
+              scan content and allow assistive technologies to provide efficient
+              navigation. Headings should be used based on importance, not
+              appearance. Skipping heading levels can confuse both users and
+              machines.
+            </p>
+            <h4>Key Points</h4>
+            <ul>
+              <li>One primary heading per page is recommended</li>
+              <li>Headings should follow logical order</li>
+              <li>Headings improve SEO and accessibility</li>
+            </ul>
+            <h2>Review Questions</h2>
+            <ol>
+              <li>Why should headings not be chosen for styling?</li>
+              <li>How do headings help screen reader users?</li>
+            </ol>
+          </section>
+          <section id="text_semantics">
+            <h2>Headings and Document Outline</h2>
+            <h3>Text Semantics: Emphasis vs Importance</h3>
+            <p>
+              Semantic text elements communicate meaning rather than appearance.
+              Emphasis changes how text is read or interpreted, while importance
+              highlights critical information. Using semantic text correctly
+              improves accessibility and clarity.
+            </p>
+            <h4>Key Points</h4>
+            <ul>
+              <li>Meaning is more important than styling</li>
+              <li>Assistive technologies rely on semantics</li>
+            </ul>
+            <h2>Review Questions</h2>
+            <ol>
+              <li>How is semantic emphasis different from visual styling?</li>
+              <li>When should importance be used?</li>
+            </ol>
+          </section>
+        </article>
+      </div>
     </main>
-    <script>
-      const menuIcon = document.querySelector(".menuIcon");
-      const navbar = document.getElementById("navbar");
-      const mainDoc = document.getElementById("main-doc");
-      const navLinks = document.querySelectorAll("#navbar a");
-
-      function navbarToggle() {
-        navbar.classList.toggle("hide");
-        mainDoc.classList.toggle("adjust");
-      }
-      menuIcon.addEventListener("click", () => {
-        navbarToggle();
-      });
-
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          navbarToggle();
-        });
-      });
-    </script>
+    <script type="module" src="js/sidebar.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
