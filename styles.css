@@ -24,7 +24,7 @@
   --glow-accent: 0 0 18px rgba(255, 235, 59, 0.4);
 
   /* Layout */
-  --max-width: 900px;
+  --max-width: 100%;
   --section-gap: 40px;
 
   /* Animation */
@@ -40,12 +40,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  background: linear-gradient(135deg, #021b40, #0769e0 40%, #021b40);
-  color: var(--text-light);
   scroll-behavior: smooth;
 }
 
 body {
+  background: linear-gradient(135deg, #021b40, #0769e0 40%, #021b40);
+  color: var(--text-light);
   display: flex;
   flex-direction: column;
 }
@@ -105,12 +105,12 @@ nav > ul > li {
 }
 #welcome-message {
   border-bottom: 2px solid #ffffff;
-  width: 100%;
   text-align: center;
   margin: 30px auto;
   text-align: center;
   text-wrap: nowrap;
   overflow: hidden;
+  font-size: clamp(1.2rem, 2.5vw, 2.8rem);
   animation: typing 3s steps(30) forwards;
 }
 @keyframes typing {
@@ -137,17 +137,15 @@ nav > ul > li {
 }
 main {
   padding-top: 70px;
-  width: 100%;
 }
 
 .container {
-  width: min(var(--max-width), 90%);
+  max-width: var(--max-width);
+  width: 90%;
   margin: var(--section-gap) auto;
-  padding: 30px;
-
+  padding: 10px;
   background: var(--bg-glass);
   backdrop-filter: blur(18px);
-
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -160,10 +158,8 @@ main {
   text-align: center;
   padding: 50px 20px;
   margin: 40px auto;
-
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-
+  max-width: 600px;
+  backdrop-filter: blur(100px);
   border-radius: var(--radius);
   animation: fadeIn 1s ease-out;
 }
@@ -220,11 +216,11 @@ blockquote img {
 
 form {
   background: var(--bg-dark);
-  padding: 20px;
+  padding: 10px 5px;
   border-radius: var(--radius);
   margin: 0 auto;
-  width: min(400px, 95%);
-
+  width: var(--max-width);
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -234,14 +230,10 @@ input,
 textarea {
   width: 90%;
   padding: 12px;
-
   background: #fafafa;
   border-radius: var(--radius);
   border: none;
-
-  font-size: 17px;
   outline: none;
-
   transition: var(--transition);
 }
 
