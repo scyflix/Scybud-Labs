@@ -2,24 +2,35 @@ html,
 body {
   font-family: "Popins", Arial, Sans-serif;
   line-height: 1.5;
-  font-size: 1em;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+:root {
+  --bg: #1e1e1e;
+  --text-color: #f5f5dc;
+  --font-size: clamp(1rem, 1.2rem, 4rem);
+  --border-color: #696969;
+  --details-bg: #2e2e2e;
+  --summary-bg: #3b3b3b;
+  --summary-hover: var(var(--details-bg));
+  --link-color: #7fffe1;
+  --link-border: #7fffe13e;
+}
 body {
   margin: 0;
-  background: #1e1e1e;
-  color: rgb(255, 255, 255);
+  background: var(--bg);
+  font-size: var(--font-size);
+  color: var(--text-color);
 }
 header {
   position: relative;
 }
 header h1 {
-  border-bottom: 2px solid #696969;
+  border-bottom: 2px solid var(--border-color);
   padding: 15px 0 0 10px;
 }
 details {
-  background: #2e2e2e;
+  background: var(--details-bg);
   margin-bottom: 4px;
 }
 
@@ -28,19 +39,20 @@ details ul {
   padding-left: 1rem;
   list-style: none;
 }
+
 summary {
-  background: #3b3b3b;
+  background: var(--summary-bg);
   font-size: 1.2rem;
   padding: 3px 15px;
   cursor: pointer;
 }
 summary:hover {
-  background: #2e2e2e;
+  background: var(--summary-hover);
 }
 section,
 #Introduction {
-  background: #2e2e2e;
-  padding: 15px;
+  background: var(--details-bg);
+  padding: 15px 8px;
   margin: 14px;
   border-radius: 12px;
 }
@@ -65,39 +77,43 @@ h4::before {
   margin: 12px 4px;
   border-radius: 50%;
 }
-nav#navbar.hide {
-  left: -100%;
-}
 nav#navbar {
   position: fixed;
-  border-right: 3px solid #696969;
+  border-right: 3px solid var(--border-color);
   margin-right: 10px;
   top: 0;
   left: 0;
   height: 100vh;
   width: 250px;
   z-index: 2000;
-  background: #1e1e1e;
+  background: var(--bg);
   transition: all 0.5s ease;
+  overflow-y: auto;
 }
 #navbar a {
   display: block;
   text-decoration: none;
   font-size: 1.2rem;
-  color: #7fffe1;
+  color: var(--link-color);
   padding: 0 10px;
-  border-bottom: 2px solid #7fffe13e;
+  border-bottom: 2px solid var(--link-border);
 }
 #navbar a:hover {
-  opacity: 0.7;
+  opacity: 0.5;
+}
+#navbar a:focus-within {
+  color: yellow;
+}
+#navbar details ul li a.nav-link.activeLink {
+  color: yellow;
 }
 #main-doc {
   margin-left: 250px;
-  padding: 20px;
+  padding: 20px 5px;
   transition: all 0.5s ease;
 }
-#main-doc.adjust {
-  margin-left: 2px;
+pre span {
+  color: rgba(0, 128, 0, 0.557);
 }
 code {
   font-family: monospace;
@@ -109,16 +125,47 @@ code {
   margin: 2px;
   padding: 2px;
 }
-
-@media (max-width: 600px) {
+.attribute {
+  color: #2600ff;
+}
+@media (max-width: 800px) {
+  .menuIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    top: 10px;
+    left: 15px;
+    position: fixed;
+    gap: 3px;
+    z-index: 9990;
+    background-color: #696969;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    animation: slide 0.9s ease;
+  }
+  .menuIcon span {
+    width: 24px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 2px 5px;
+    margin: 0 auto;
+  }
+  .menuIcon:hover {
+    opacity: 0.7;
+  }
+  #main-doc.adjust {
+    margin-left: 2px;
+  }
   nav#navbar.hide {
-    top: -100%;
-    left: 0;
+    left: -100%;
   }
   nav#navbar {
     position: fixed;
-    width: 100%;
-    height: 300px;
+    width: 90%;
+    height: 100dvh;
+    padding-bottom: 5px;
     z-index: 2;
   }
   #main-doc {
@@ -127,6 +174,9 @@ code {
   }
   #main-doc.adjust {
     margin: 50px 10px 0;
+  }
+  section {
+    margin: 0;
   }
 }
 
@@ -150,34 +200,15 @@ pre code {
   display: block;
 }
 
-.menuIcon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
-  top: 10px;
-  left: 15px;
-  position: fixed;
-  gap: 3px;
-  z-index: 9990;
-  background-color: #696969;
-  width: 35px;
-  height: 35px;
-  border-radius: 5px;
-  animation: slide 0.9s ease;
-}
-.menuIcon span {
-  width: 24px;
-  height: 4px;
-  background: #ffffff;
-  border-radius: 2px 5px;
-  margin: 0 auto;
-}
-.menuIcon:hover {
-  opacity: 0.7;
-}
 @keyframes slide {
   from {
     transform: translateX(-60px);
   }
+}
+
+footer {
+  text-align: center;
+  opacity: 0.2;
+  background-color: #111;
+  padding: 10px 0;
 }

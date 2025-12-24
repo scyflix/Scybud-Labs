@@ -9,7 +9,7 @@
 
   <body>
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" class="hide">
       <header>
         <div class="menuIcon">
           <span></span>
@@ -23,7 +23,8 @@
         <summary>Introduction</summary>
         <ul>
           <li><a class="nav-link" href="#Introduction">Introduction</a></li>
-          <li><a href="#Why_HTML" class="nav-link">Why HTML</a></li>
+          <li><a href="#why-html" class="nav-link">Why HTML</a></li>
+          <li><a href="#basic-syntax" class="nav-link">Basic Syntax</a></li>
         </ul>
       </details>
 
@@ -31,22 +32,36 @@
         <summary>Document Structure</summary>
         <ul>
           <li>
-            <a class="nav-link" href="#html_document_structure"
+            <a class="nav-link" href="#html-document-structure"
               >Document Structure</a
             >
           </li>
-          <li><a href="#basic_syntax" class="nav-link">Basic Syntax</a></li>
           <li>
-            <a href="#doctype_and_standard_mode" class="nav-link"
+            <a href="#doctype-and-standard-mode" class="nav-link"
               >Doctype & Standard Mode</a
             >
           </li>
           <li>
-            <a href="#nesting_and_content_hierarchy" class="nav-link"
+            <a href="#browser-rendering-and-dom" class="nav-link"
+              >Rendering & The DOM</a
+            >
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>Nesting, Hierarchy & Semantics</summary>
+        <ul>
+          <li>
+            <a href="#nesting-and-content-hierarchy" class="nav-link"
               >Nesting & Hierarchy</a
             >
           </li>
-          <li><a href="#semantic_Tags" class="nav-link">Semantic Tags</a></li>
+          <li><a href="#semantic-tags" class="nav-link">Semantic Tags</a></li>
+          <li>
+            <a href="#semantic-vs-generic-tags" class="nav-link"
+              >Semantic vs Generic Tags</a
+            >
+          </li>
         </ul>
       </details>
 
@@ -54,13 +69,79 @@
         <summary>Headings & Outlines</summary>
         <ul>
           <li><a href="#headings" class="nav-link">Headings</a></li>
-          <li><a href="#text_semantics" class="nav-link">Text Semantics</a></li>
+          <li><a href="#text-semantics" class="nav-link">Text Semantics</a></li>
         </ul>
       </details>
+      <a href="#html-attributes" class="nav-link">HTML Attributes</a>
+
+      <details>
+        <summary>Layout & Content Elements</summary>
+        <ul>
+          <li>
+            <a href="#block-vs-inline-elements" class="nav-link"
+              >Block vs Inline Elements</a
+            >
+          </li>
+          <li>
+            <a href="#images-and-links" class="nav-link">Images and Links</a>
+          </li>
+          <li>
+            <a href="#lists-and-structured-content" class="nav-link"
+              >Lists and Structured Content</a
+            >
+          </li>
+          <li>
+            <a href="#tables-and-data-representation" class="nav-link"
+              >Tables and Data Representation</a
+            >
+          </li>
+        </ul>
+      </details>
+      <a href="#forms-and-user-input" class="nav-link">Forms and Input</a>
+
+      <details>
+        <summary>Code Quality</summary>
+        <ul>
+
+          <li>
+            <a href="#html-formatting" class="nav-link">HTML Formatting</a>
+          </li>
+          <li>
+            <a href="#separation-of-structure-style-and-behavior" class="nav-link"
+            >Structure, Style, and Behavior</a
+            >
+          </li>
+        <li>
+          <a href="#valid-and-modern-html" class="nav-link"
+          >Valid and Modern HTML</a
+          >
+        </li>
+        <li><a href="#html-comments" class="nav-link">HTML Comments</a></li>
+        <li>
+          <a href="#file-paths-and-project-organization" class="nav-link"
+          >File Paths and Project Organization</a
+          >
+        </li>
+      </ul>
+      </details>
+
+      <details>
+        <summary>Metadata & Entities</summary>
+        <ul>
+          <li>
+            <a href="#meta-tags-and-seo" class="nav-link">Meta Tags and SEO</a>
+          </li>
+          <li><a href="#html-entities" class="nav-link">HTML Entities</a></li>
+        </ul>
+      </details>
+
+      <a href="#accessibility" class="nav-link">Accessibility</a>
+
+
     </nav>
 
     <!-- Main content -->
-    <main id="main-doc">
+    <main id="main-doc" class="adjust">
       <!-- Introduction -->
       <article class="main-section" id="Introduction">
         <section>
@@ -80,7 +161,7 @@
           </p>
         </section>
         <!-- Why HTML -->
-        <section class="main-section" id="Why_HTML">
+        <section class="main-section" id="why-html">
           <h2>Why HTML</h2>
 
           <ul>
@@ -109,12 +190,30 @@
             </li>
           </ul>
         </section>
+        <section id="basic-syntax">
+          <!-- Basic Syntax -->
+          <h3>Basic Syntax</h3>
+          <p>
+            HTML is written using tags. Most tags have an opening and closing
+            pair.
+          </p>
+          <p>Example:</p>
+          <code>&lt;tagname&gt;Content&lt;/tagname&gt;</code>
+          <hr />
+          <div class="question">
+            <h2>Review Questions</h2>
+            <ol>
+              <li>Why is document structure important for accessibility?</li>
+              <li>How does structure affect how browsers render a page?</li>
+            </ol>
+          </div>
+        </section>
       </article>
 
       <div id="hidden">
-        <article class="main-section" id="document_structure">
+        <article class="main-section" id="document-structure">
           <!--HTML Document Structure-->
-          <section id="html_document_structure">
+          <section id="html-document-structure">
             <h2>HTML Document Structure</h2>
             <p>
               An HTML document follows a standardized structure that allows
@@ -135,27 +234,9 @@
               <li>Poor structure can cause rendering issues</li>
             </ul>
           </section>
-          <section id="basic_syntax">
-            <!-- Basic Syntax -->
-            <h3>Basic Syntax</h3>
-            <p>
-              HTML is written using tags. Most tags have an opening and closing
-              pair.
-            </p>
-            <p>Example:</p>
-            <code>&lt;tagname&gt;Content&lt;/tagname&gt;</code>
-            <hr />
-            <div class="question">
-              <h2>Review Questions</h2>
-              <ol>
-                <li>Why is document structure important for accessibility?</li>
-                <li>How does structure affect how browsers render a page?</li>
-              </ol>
-            </div>
-          </section>
 
           <!--Doctype And Standards Mode-->
-          <section id="doctype_and_standard_mode">
+          <section id="doctype-and-standard-mode">
             <h2>Doctype and standard mode</h2>
             <p>
               The <code>&lt;!DOCTYPE /&gt;</code> declaration tells the browser
@@ -181,11 +262,26 @@
               <li>Why is standards mode important?</li>
             </ol>
           </section>
+
+          <!--Browser Rendering and the DOM-->
+          <section id="browser-rendering-and-dom">
+            <h2>Browser Rendering and the DOM</h2>
+            <p>
+              Browsers parse HTML into the DOM before rendering. Invalid markup
+              can delay rendering and cause unpredictable behavior.
+              Understanding rendering helps improve performance.
+            </p>
+            <h3>Review Questions</h3>
+            <ol>
+              <li>What is DOM</li>
+              <li>How does invalid HTML affect rendering?</li>
+            </ol>
+          </section>
         </article>
 
         <!--HTML Nesting and Content Hierarchy-->
-        <article id="html_nesting_and_content_hierarchy">
-          <section id="nesting_and_content_hierarchy">
+        <article id="html-nesting-and-content-hierarchy">
+          <section id="nesting-and-content-hierarchy">
             <h2>HTML Nesting and Content Hierarchy</h2>
 
             <p>
@@ -219,10 +315,14 @@
           </section>
 
           <!-- Semantic Tags -->
-          <section class="main-section" id="semantic_Tags">
+          <section class="main-section" id="semantic-tags">
             <h2>Using Semantic Tags</h2>
 
-            <p>Semantic tags describe the meaning and purpose of content.</p>
+            <p>
+              Semantic tags uses meaningful elements to describe content
+              structure. It creates landmarks that help users navigate
+              efficiently.
+            </p>
 
             <p>
               Examples include <code>&lt;header&gt;</code>,
@@ -230,40 +330,50 @@
               <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and
               <code>&lt;footer&gt;</code>.
             </p>
+            <h4>Benefits</h4>
+            <ul>
+              <li>Improved accessibility</li>
+              <li>Better SEO</li>
+              <li>Easier maintenance</li>
+            </ul>
+            <section id="semantic-vs-generic-tags">
+              <h2>When to use semantic tags vs generic tags</h2>
+              <h4>Semantic Tags</h4>
+              <p>
+                You should only use semantic tags when the element has meaning.
+                An element having meaning in the sense that it is desvriptive
+                and you can identify its purpose just from its name.
+              </p>
+              <p class="example">Example:</p>
+              <pre><code>
+&lt;header&gt; &lt;/header&gt;
+&lt;main&gt; &lt;/main&gt; 
+&lt;nav&gt; &lt;/nav&gt; 
+&lt;article&gt; &lt;/article&gt;</code></pre>
 
-            <h3>When to use semantic tags vs generic tags</h3>
-            <h4>Semantic Tags</h4>
-            <p>
-              You should only use semantic tags when the element has meaning. An
-              element having meaning in the sense that it is desvriptive and you
-              can identify its purpose just from its name.
-            </p>
-            <p class="example">Example:</p>
-            <pre><code>
-    &lt;header&gt; &lt;/header&gt;
-    &lt;main&gt; &lt;/main&gt; 
-    &lt;nav&gt; &lt;/nav&gt; 
-    &lt;article&gt; &lt;/article&gt;</code></pre>
-          </section>
-
-          <section id="generic_tags">
-            <h4>Using Generic Tags</h4>
-            <p>
-              Generic tags should be used onlly when semantic tags dont make
-              sense. They come in handy when the content has no semantic
-              meaning.
-            </p>
-            <p>Example</p>
-            <pre><code>
-    &lt;div id=&quot;modal&quot;&gt;&lt;/div&gt;
-    &lt;span class=&quot;shadow-box&quot;&gt; &lt;/span&gt; 
-  </code>
-      </pre>
+              <h4>Using Generic Tags</h4>
+              <p>
+                Generic tags should be used onlly when semantic tags dont make
+                sense. They come in handy when the content has no semantic
+                meaning.
+              </p>
+              <p>Example</p>
+              <pre><code>
+&lt;div id=&quot;modal&quot;&gt;&lt;/div&gt;
+&lt;span class=&quot;shadow-box&quot;&gt; &lt;/span&gt; 
+</code>
+</pre>
+            </section>
+            <h2>Review Questions</h2>
+            <ol>
+              <li>Why is semantic HTML better than generic containers?</li>
+              <li>How does semantic HTML improve keyboard navigation?</li>
+            </ol>
           </section>
         </article>
 
         <!--Headings and document outlines-->
-        <article id="headings_and_document_outline">
+        <article id="headings-and-document-outline">
           <section id="headings">
             <h2>Headings and Document Outline</h2>
             <h3>Headings</h3>
@@ -286,7 +396,7 @@
               <li>How do headings help screen reader users?</li>
             </ol>
           </section>
-          <section id="text_semantics">
+          <section id="text-semantics">
             <h2>Headings and Document Outline</h2>
             <h3>Text Semantics: Emphasis vs Importance</h3>
             <p>
@@ -307,8 +417,63 @@
             </ol>
           </section>
         </article>
+
+        <article id="attributes">
+          <section id="html-attributes">
+            <h2>HTML Attributes</h2>
+            <p>
+              Attributes provide additional information about elements. They
+              influence styling, behavior, accessibility, and interactivity.
+              Some attributes apply globally, while others are specific to
+              certain elements. Incorrect or missing attributes can break
+              functionality and accessibility.
+            </p>
+            <p>Example:</p>
+            <pre><code>
+  <span>//id, href and class are attributes</span>
+  &lt;a <span class="attribute">id=&quot;attribute&quot; href=&quot;example.com&quot;</span>&gt;&lt;/a&gt;
+    </code>
+        </pre>
+            <p>
+              In this example, <code class="attribute">id="attribute"</code> and
+              <code class="attribute">href="url"</code> are the attributes in in
+              the anchor(a) element. They are usually written inside the
+              openingtag of the element and an element can contain more than one
+              element.
+            </p>
+            <h4>Key Points</h4>
+            <ul>
+              <li>Attributes modify element behavior</li>
+              <li>Some attributes are required</li>
+              <li>Misuse can cause invalid HTML</li>
+            </ul>
+            <h2>Review Questions</h2>
+            <ol>
+              <li>What problems arise from missing required attributes?</li>
+              <li>How do attributes interact with CSS and JavaScript?</li>
+            </ol>
+          </section>
+        </article>
+
+        <article id="formatting">
+          <section id="html-formatting">
+            <h2>Clean HTML Formatting</h2>
+            <p>
+              Clean formatting improves readability and collaboration. While
+              browsers ignore formatting, developers rely on it for
+              understanding and debugging. Consistent indentation and logical
+              grouping reduce errors and improve maintainability.
+            </p>
+            <h2>Review Questions</h2>
+            <ol>
+              <li>Why is formatting important even if browsers ignore it?</li>
+              <li>How does clean formatting help debugging?</li>
+            </ol>
+          </section>
+        </article>
       </div>
     </main>
+    <footer>&copy; Abdulroqib & Edison</footer>
     <script type="module" src="js/sidebar.js"></script>
     <script type="module" src="js/main.js"></script>
   </body>
