@@ -39,6 +39,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  line-height: 1.7;
   font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth;
 }
@@ -189,24 +190,24 @@ blockquote img {
 
 .btn,
 .button {
-  display: inline-block;
+  display: inline;
   padding: 10px 25px;
 
-  background: var(--accent);
+  background: linear-gradient(145deg, #00bbff, yellow);
   color: var(--bg-dark);
 
-  border-radius: var(--radius-round);
+  border-radius: var(--radius);
   font-weight: bold;
-
+  font-size: 1.2rem;
+  margin: 22px 0;
   box-shadow: var(--glow-accent);
-  transition: var(--transition);
+  transition: all var(--transition);
 }
 
 .btn:hover,
 .button:hover {
-  background: #fff;
+  background: linear-gradient(145deg, yellow, #00bbff);
   color: var(--bg-dark);
-
   transform: scale(1.05);
 }
 
