@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Internship Reflection – Scybud Labs</title>
+
+<style>
+/* -------------------- */
+/* COLOR PALETTE        */
+/* -------------------- */
+:root {
+  --bg-dark: #0a0f1a;
+  --bg-mid: #111b2e;
+  --bg-glass: rgba(255, 255, 255, 0.08);
+
+  --primary: #3b82f6;
+  --primary-light: #93c5fd;
+
+  --accent: #facc15;
+  --accent-soft: rgba(250, 204, 21, 0.25);
+
+  --text-light: #e8eeff;
+  --text-dim: #9aa7c7;
+
+  --radius: 14px;
+  --radius-round: 50px;
+  --shadow: 0 0 22px rgba(0, 0, 0, 0.28);
+  --glow-accent: 0 0 18px rgba(250, 204, 21, 0.35);
+
+  --max-width: 900px;
+  --section-gap: 40px;
+
+  --transition: 0.3s ease;
+}
+
+/* -------------------- */
+/* GLOBAL STYLES        */
+/* -------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding: 40px 16px;
+}
+main {
+   display: flex;
+   justify-content: center;
+
+}
+
+.blog-container {
+  width: 100%;
+  max-width: var(--max-width);
+  animation: fadeIn 1s ease forwards;
+}
+
+/* -------------------- */
+/* HEADER BANNER        */
+/* -------------------- */
+.header-banner {
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--bg-glass);
+}
+
+.header-banner h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: var(--primary-light);
+}
+
+.header-banner p {
+  margin-top: 10px;
+  color: var(--text-dim);
+  font-size: 1.1rem;
+}
+
+/* -------------------- */
+/* IMAGE SLOT           */
+/* -------------------- */
+.image-slot {
+  width: 100%;
+  height: 260px;
+  border-radius: var(--radius);
+  background: var(--bg-glass);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  margin: 20px 0;
+  box-shadow: var(--shadow);
+}
+
+.image-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -------------------- */
+/* CONTENT SECTIONS     */
+/* -------------------- */
+.section {
+  background: var(--bg-mid);
+  padding: 24px;
+  border-radius: var(--radius);
+  margin-bottom: var(--section-gap);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--bg-glass);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.section:nth-child(2) { animation-delay: 0.1s; }
+.section:nth-child(3) { animation-delay: 0.2s; }
+.section:nth-child(4) { animation-delay: 0.3s; }
+.section:nth-child(5) { animation-delay: 0.4s; }
+
+.section h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: var(--primary-light);
+}
+
+.section p {
+  line-height: 1.7;
+  color: var(--text-dim);
+  font-size: 1rem;
+}
+
+.section strong {
+  color: var(--text-light);
+}
+
+/* -------------------- */
+/* FOOTER               */
+/* -------------------- */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--bg-glass);
+}
+
+/* -------------------- */
+/* SCROLL TO TOP BUTTON */
+/* -------------------- */
+#scrollTopBtn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 50;
+}
+
+#scrollTopBtn.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#scrollTopBtn svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--text-light);
+}
+
+/* -------------------- */
+/* ANIMATIONS           */
+/* -------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------- */
+/* RESPONSIVE           */
+/* -------------------- */
+@media (max-width: 600px) {
+  .section {
+    padding: 18px;
+  }
+  .section h2 {
+    font-size: 1.4rem;
+  }
+  .header-banner h1 {
+    font-size: 1.8rem;
+  }
+}
+.backBtn {
+   color: var(--accent);
+   background-color: var(--bg-mid);
+   position: fixed;
+   top: 10px;
+   left: 10px;
+   height: fit-content;
+   width: fit-content;
+   padding: 10px;
+   border-radius: var(--radius);
+   z-index: 1;
+   text-decoration: none;
+   transition: all 0.3s ease;
+}
+.backBtn:hover {
+box-shadow: var(--shadow);
+transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+   <a href="index.html" class="backBtn"><span>←</span>Home</a>
+
+   <main>
+
+      <div class="blog-container">
+         
+  <!-- HEADER -->
+  <div class="header-banner">
+    <h1>My Internship at the University of Bremen</h1>
+    <p>A reflection on my work, learning, and experience in IT Service & Support</p>
+  </div>
+<p style="text-align:center; color: var(--text-dim); font-size: 0.9rem; margin-top: -10px;">
+  <em>Some of the written content in this blog was generated with AI.</em>
+</p>
+
+  <!-- SECTION 1 -->
+  <div class="section">
+    <h2>The Company</h2>
+
+    <p>
+      I completed my internship at the University of Bremen in the IT Service and Support department. 
+      This department is responsible for setting up and maintaining computer applications used in teaching and research. 
+      They repair PCs, manage networks, and install essential software across the university.
+    </p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section">
+    <h2>Workplace and Tools</h2>
+
+    <!-- IMAGE SLOT 2 -->
+    <div class="image-slot">
+      <img src="assets/IMG_20260213_154015.jpg" alt="AI generated image of IT specialist workspace">
+    </div>
+
+    <p>
+      IT specialists for system integration ensure that IT systems run reliably. 
+      They set up devices and networks, fix technical issues, and support users with IT-related questions. 
+      The training for this profession lasts three years and combines technical knowledge with practical teamwork.
+    </p>
+    <p>
+      Their main tasks include planning and configuring IT systems, operating networks, analyzing and fixing malfunctions, 
+      advising users, creating system documentation, and conducting small IT training sessions.
+    </p>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section">
+    <h2>My Tasks During the Internship</h2>
+
+    <!-- IMAGE SLOT 3 -->
+    <div class="image-slot">
+      <img src="assets/IMG_20260212_095325.jpg" alt="AI generated image of computer hardware assembly">
+    </div>
+
+    <p>
+      During my internship, I disassembled a computer completely and rebuilt it from scratch. 
+      I installed different operating systems, including Windows and Linux, and developed two websites: 
+      a client‑side chat application and a task‑logging tool that later evolved into <strong>LogHue</strong>. 
+      At the end of my internship, I also gave a presentation about the components inside a computer.
+    </p>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="section">
+    <h2>My Experiences and Impressions</h2>
+
+    <!-- IMAGE SLOT 4 -->
+    <div class="image-slot">
+      <img src="assets/IMG_20260226_212256.jpg" alt="AI generated image representing learning and growth">
+    </div>
+
+    <p>
+      I honestly did not expect to learn so much during this internship. 
+      Even though I already knew the basics, the network simulation exercises helped me understand everything much better. 
+      One of the most important things I took away from this experience was the idea for the website I developed, 
+      which I have now expanded into something bigger that is still in development.
+   </p>
+   <p>
+      Overall, this opportunity gave me something truly valuable, and I am grateful to my teachers and my internship supervisor for their support.
+   </p>
+</div>
+</main>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 Scybud Labs · Internship Reflection by Abdulroqib
+  </div>
+
+</div>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button id="scrollTopBtn" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" fill="none">
+    <path d="M6 15L12 9L18 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<script>
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+function toggleScrollButton() {
+  if (window.scrollY > 200) {
+    scrollBtn.classList.add("visible");
+  } else {
+    scrollBtn.classList.remove("visible");
+  }
+}
+
+window.addEventListener("scroll", toggleScrollButton);
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
+
+</body>
+</html>

@@ -4,24 +4,24 @@
 
 :root {
   /* Colors */
-  --bg-dark: #021b40;
-  --bg-mid: #012d66;
-  --bg-glass: rgba(255, 255, 255, 0.12);
+  --bg-dark: #0a0f1a;          /* deeper, modern navy */
+  --bg-mid: #111b2e;           /* smoother mid‑tone */
+  --bg-glass: rgba(255, 255, 255, 0.08);
 
-  --primary: #0769e0;
-  --primary-light: #65abff;
+  --primary: #3b82f6;          /* clean, modern blue */
+  --primary-light: #93c5fd;    /* softer highlight blue */
 
-  --accent: #ffeb3b;
-  --accent-soft: rgba(255, 235, 59, 0.35);
+  --accent: #facc15;           /* refined warm yellow */
+  --accent-soft: rgba(250, 204, 21, 0.25);
 
-  --text-light: #f0f4ff;
-  --text-dim: #9cb6e3;
+  --text-light: #e8eeff;       /* softer, less harsh white */
+  --text-dim: #9aa7c7;         /* balanced dim text */
 
   /* FX */
   --radius: 14px;
   --radius-round: 50px;
-  --shadow: 0 0 18px rgba(0, 0, 0, 0.25);
-  --glow-accent: 0 0 18px rgba(255, 235, 59, 0.4);
+  --shadow: 0 0 22px rgba(0, 0, 0, 0.28);
+  --glow-accent: 0 0 18px rgba(250, 204, 21, 0.35);
 
   /* Layout */
   --max-width: 100%;
@@ -31,6 +31,7 @@
   --transition: 0.3s ease;
 }
 
+
 /* ================================
    BASE ELEMENTS
    ================================ */
@@ -39,13 +40,14 @@ html,
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.7;
-  font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(135deg, #021b40, #0769e0 40%, #021b40);
+  width: var(--max-width);
+  line-height: 1.7;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(135deg, var(--bg-dark), var(--bg-mid));
   color: var(--text-light);
   display: flex;
   flex-direction: column;
@@ -71,7 +73,6 @@ a:hover {
    DESKTOP HEADER (fixed)
    ================================ */
 header {
-  width: 100%;
   top: 0;
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(8px);
@@ -80,7 +81,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: sticky;
   z-index: 1000;
 }
 nav {
@@ -105,6 +106,8 @@ nav > ul > li {
   display: inline;
 }
 #welcome-message {
+  width: fit-content;
+  display: block;
   border-bottom: 2px solid #ffffff;
   text-align: center;
   margin: 30px auto;
@@ -138,6 +141,8 @@ nav > ul > li {
 }
 main {
   padding-top: 70px;
+  margin: auto;
+  max-width: var(--max-width);
 }
 
 .container {
@@ -157,9 +162,11 @@ main {
 
 #hero {
   text-align: center;
-  padding: 50px 20px;
+  padding: 50px 10px;
   margin: 40px auto;
   max-width: 600px;
+  width: 90%;
+  box-shadow: 0 0 15px rgba(79, 78, 78, 0.2);
   backdrop-filter: blur(100px);
   border-radius: var(--radius);
   animation: fadeIn 1s ease-out;
@@ -263,6 +270,7 @@ textarea:focus {
 
 footer {
   text-align: center;
+  max-width: var(--max-width);
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(6px);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
